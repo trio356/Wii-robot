@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "Wii-Robot",
+    "slug": "wii-robot",
+    "version": "0.1.0",
+    "orientation": "landscape",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSBluetoothAlwaysUsageDescription": "Wii-Robot needs Bluetooth to connect to the ESP32 robot.",
+        "NSMicrophoneUsageDescription": "Wii-Robot needs microphone access for wake-word and voice commands."
+      }
+    },
+    "android": {
+      "package": "com.wii.robot",
+      "versionCode": 1,
+      "permissions": [
+        "RECORD_AUDIO",
+        "BLUETOOTH_SCAN",
+        "BLUETOOTH_CONNECT",
+        "ACCESS_FINE_LOCATION",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN"
+      ]
+    },
+    "plugins": [
+      "expo-dev-client",
+      [
+        "react-native-ble-plx",
+        {
+          "isBackgroundEnabled": false,
+          "neverForLocation": false
+        }
+      ],
+      [
+        "expo-screen-orientation",
+        {
+          "initialOrientation": "LANDSCAPE"
+        }
+      ],
+      "expo-status-bar",
+      "react-native-vosk",
+      "expo-audio",
+      "expo-asset"
+    ]
+  }
+}

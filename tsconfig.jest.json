@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": ["jest", "node"]
+  },
+  "include": ["src/intent/**/*.ts", "src/ai/sentences.ts", "src/ai/sentences.test.ts"]
+}
